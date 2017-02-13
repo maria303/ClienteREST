@@ -62,7 +62,7 @@ public class ClienteClienteTest {
 //
 //        System.out.println("Insertando un nuevo cliente en el sistema");
 //        Cliente c2 = addCliente("http://localhost:8080/ProyectoFinal20162017-web/webservice/ClienteService/Cliente/add", nuevoCliente);
-//        System.out.println("La categoria insertada es: " + c2.toString());
+//        System.out.println("El cliente insertado es: " + c2.toString());
 //        System.out.println("----------------------------\n");
         
         // **********************************************
@@ -85,10 +85,10 @@ public class ClienteClienteTest {
 
         
         // **********************************************
-        // *** BORRAMOS UNA CATEGORIA AL SISTEMA
+        // *** BORRAMOS UN CLIENTE DEL SISTEMA
         // **********************************************         
         System.out.println("Borrando un cliente en concreto del sistema");
-        deleteCliente("http://localhost:8080/ProyectoFinal20162017-web/webservice/ClienteService/Cliente/delete/2");
+        deleteCliente("http://localhost:8080/ProyectoFinal20162017-web/webservice/ClienteService/Cliente/delete/3");
 //        System.out.println("El cliente recuperado es: " + c.toString());
         System.out.println("----------------------------\n");   
     }
