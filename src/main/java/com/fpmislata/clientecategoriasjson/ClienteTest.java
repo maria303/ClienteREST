@@ -39,12 +39,12 @@ public class ClienteTest {
         System.out.println("----------------------------\n");
 
         // **********************************************
-//        // *** RECUPERAMOS UNA CATEGORIA EN CONCRETO
-//        // **********************************************
-//        System.out.println("Recuperando una categoria en concrero del sistema");
-//        Categoria p = getCategoria("http://localhost:8080/ProyectoFinal20162017-web/webservice/CategoriaService/Categorias/findById/1");
-//        System.out.println("La categoria recuperada es: " + p.toString());
-//        System.out.println("----------------------------\n");
+        // *** RECUPERAMOS UNA CATEGORIA EN CONCRETO
+        // **********************************************
+        System.out.println("Recuperando una categoria en concrero del sistema");
+        Categoria p = getCategoria("http://localhost:8080/ProyectoFinal20162017-web/webservice/CategoriaService/Categorias/findById/1");
+        System.out.println("La categoria recuperada es: " + p.toString());
+        System.out.println("----------------------------\n");
 //
 //        // **********************************************
 //        // *** AÑADIMOS UNA CATEGORIA AL SISTEMA
