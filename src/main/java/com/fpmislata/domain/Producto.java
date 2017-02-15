@@ -5,6 +5,7 @@
  */
 package com.fpmislata.domain;
 
+import com.google.gson.annotations.Expose;
 import java.io.Serializable;
 import java.util.Objects;
 import javax.persistence.Column;
@@ -37,16 +38,20 @@ public class Producto implements Serializable{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_producto")
+    @Expose
     private int id;
     
     @Column(nullable = false, length = 50)
+    @Expose
     private String nombre;
     
     @Column(nullable = false)
+    @Expose
     private Float precio;
     
     @ManyToOne
     @JoinColumn(name = "categoria")
+    @Expose
     private Categoria categoria;
 
     public Producto() {

@@ -30,11 +30,11 @@ public class Categoria implements Serializable{
     @Id
     @Column(name="id_categoria")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Expose 
+    @Expose
     private int id;
     
     @Column(nullable=false, length=50)
-    @Expose 
+    @Expose
     private String nombre;
 
     public Categoria() {
