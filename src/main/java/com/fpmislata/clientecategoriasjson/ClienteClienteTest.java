@@ -89,8 +89,6 @@ public class ClienteClienteTest {
         // **********************************************         
         System.out.println("Borrando un cliente en concreto del sistema");
         deleteCliente("http://localhost:8080/ProyectoFinal20162017-web/webservice/ClienteService/Cliente/delete/3");
-//        System.out.println("El cliente recuperado es: " + c.toString());
-        System.out.println("----------------------------\n");   
     }
     
     // Obtenemos la lista de categorias

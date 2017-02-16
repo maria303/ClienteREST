@@ -52,20 +52,40 @@ public class ProductoClienteTest {
         System.out.println("----------------------");
 
         //Añadir producto
-        System.out.println("Añadir producto");
-        Producto nuevoProducto = new Producto();
-        nuevoProducto.setNombre("Producto nuevo");
-        nuevoProducto.setPrecio(20F);
+//        System.out.println("Añadir producto");
+//        Producto nuevoProducto = new Producto();
+//        nuevoProducto.setNombre("Producto nuevo");
+//        nuevoProducto.setPrecio(20F);
+//
+//        Categoria categoria = new Categoria();
+//        categoria.setNombre("Nueva categoria");
+//
+//        nuevoProducto.setCategoria(categoria);
+//
+//        Producto prod = addProducto("http://localhost:8080/ProyectoFinal20162017-web/webservice/ProductoService/Productos/add", nuevoProducto);
+//        System.out.println("Nuevo producto: " + prod.getNombre() + " - " + prod.getPrecio() + " - " + prod.getCategoria());
+        
+        System.out.println("----------------------");
 
-        Categoria categoria = new Categoria();
-        categoria.setNombre("Nueva categoria");
-
-        nuevoProducto.setCategoria(categoria);
-
-        Producto prod = addProducto("http://localhost:8080/ProyectoFinal20162017-web/webservice/ProductoService/Productos/add", nuevoProducto);
-        System.out.println("Nuevo producto: " + prod.getNombre() + " - " + prod.getPrecio() + " - " + prod.getCategoria());
+        //Modificar producto
+//        System.out.println("Modificar producto");
+//        Producto productoExistente = new Producto();
+//        productoExistente.setNombre("Producto modificado");
+//        productoExistente.setPrecio(10F);
+//
+//        Categoria categoria = new Categoria();
+//        categoria.setNombre("Nueva categoria");
+//        productoExistente.setCategoria(categoria);
+//
+//        System.out.println("Modificando un producto en el sistema");
+//        Producto p3 = updateProducto("http://localhost:8080/ProyectoFinal20162017-web/webservice/ProductoService/Producto/update/", productoExistente);
+//        System.out.println("El producto modificado es ahora: " + p3.toString());
 
         System.out.println("----------------------");
+
+        //Borrar producto
+        System.out.println("Borrando un producto en concreto del sistema");
+        deleteProducto("http://localhost:8080/ProyectoFinal20162017-web/webservice/ProductoService/Producto/delete/3");
     }
 
     // Obtenemos la lista de productos
