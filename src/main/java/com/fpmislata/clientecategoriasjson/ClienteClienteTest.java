@@ -28,9 +28,8 @@ import org.apache.http.impl.client.DefaultHttpClient;
  */
 public class ClienteClienteTest {
     public static void main(String[] args) throws IOException {
-        // ***********************
-        // *** LISTAR CLIENTE
-        // ***********************     
+        
+        //Listar clientes 
         System.out.println("Lista de clientes del sistema");
         System.out.println("---------------------------");
         List<Cliente> lista = getListCliente("http://localhost:8080/ProyectoFinal20162017-web/webservice/ClienteService/Clientes");
@@ -39,56 +38,51 @@ public class ClienteClienteTest {
         }
         System.out.println("----------------------------\n");
 
-        // **********************************************
-        // *** RECUPERAMOS UN CLIENTE EN CONCRETO
-        // **********************************************
+        
+        //Mostrar cliente concreto
         System.out.println("Recuperando un cliente en concreto del sistema");
         Cliente c = getCliente("http://localhost:8080/ProyectoFinal20162017-web/webservice/ClienteService/Cliente/findById/1");
         System.out.println("El cliente recuperado es: " + c.toString());
         System.out.println("----------------------------\n");
 
-        // **********************************************
-        // *** AÑADIMOS UN Cliente AL SISTEMA
-        // **********************************************        
-//        Cliente nuevoCliente = new Cliente();
-//        nuevoCliente.setNombre("jose");
-//        nuevoCliente.setApellidos("perez");
-//        nuevoCliente.setNif("1234");
-//        nuevoCliente.setDireccion("calle arriba");
-//        nuevoCliente.setPoblacion("valencia");
-//        nuevoCliente.setProvincia("valencia");
-//        nuevoCliente.setCodigo_postal("6543");
-//        nuevoCliente.setTelefono("98765432");
-//
-//        System.out.println("Insertando un nuevo cliente en el sistema");
-//        Cliente c2 = addCliente("http://localhost:8080/ProyectoFinal20162017-web/webservice/ClienteService/Cliente/add", nuevoCliente);
-//        System.out.println("El cliente insertado es: " + c2.toString());
-//        System.out.println("----------------------------\n");
         
-        // **********************************************
-        // *** ACTUALIZAMOS UN CLIENTE EN EL SISTEMA
-        // **********************************************        
-//        Cliente clienteExistente = new Cliente();
-//        clienteExistente.setNombre("jose");
-//        clienteExistente.setApellidos("perez");
-//        clienteExistente.setNif("1234");
-//        clienteExistente.setDireccion("calle arriba");
-//        clienteExistente.setPoblacion("valencia");
-//        clienteExistente.setProvincia("valencia");
-//        clienteExistente.setCodigo_postal("6543");
-//        clienteExistente.setTelefono("98765432");
-//        
-//        System.out.println("Modificando un cliente en el sistema");
-//        Cliente c3 = updateCliente("http://localhost:8080/ProyectoFinal20162017-web/webservice/ClienteService/Cliente/update/", clienteExistente);
-//        System.out.println("El cliente modificado es ahora: " + c3.toString());
-//        System.out.println("----------------------------\n");        
+        //Añadir producto
+        Cliente nuevoCliente = new Cliente();
+        nuevoCliente.setNombre("jose");
+        nuevoCliente.setApellidos("perez");
+        nuevoCliente.setNif("1234");
+        nuevoCliente.setDireccion("calle arriba");
+        nuevoCliente.setPoblacion("valencia");
+        nuevoCliente.setProvincia("valencia");
+        nuevoCliente.setCodigo_postal("6543");
+        nuevoCliente.setTelefono("98765432");
+
+        System.out.println("Insertando un nuevo cliente en el sistema");
+        Cliente c2 = addCliente("http://localhost:8080/ProyectoFinal20162017-web/webservice/ClienteService/Cliente/add", nuevoCliente);
+        System.out.println("El cliente insertado es: " + c2.toString());
+        System.out.println("----------------------------\n");
+        
+        
+        //Modificar cliente
+        Cliente clienteExistente = new Cliente();
+        clienteExistente.setNombre("jose");
+        clienteExistente.setApellidos("perez");
+        clienteExistente.setNif("1234");
+        clienteExistente.setDireccion("calle arriba");
+        clienteExistente.setPoblacion("valencia");
+        clienteExistente.setProvincia("valencia");
+        clienteExistente.setCodigo_postal("6543");
+        clienteExistente.setTelefono("98765432");
+        
+        System.out.println("Modificando un cliente en el sistema");
+        Cliente c3 = updateCliente("http://localhost:8080/ProyectoFinal20162017-web/webservice/ClienteService/Cliente/update/", clienteExistente);
+        System.out.println("El cliente modificado es ahora: " + c3.toString());
+        System.out.println("----------------------------\n");        
 
         
-        // **********************************************
-        // *** BORRAMOS UN CLIENTE DEL SISTEMA
-        // **********************************************         
+        //Borrar cliente
         System.out.println("Borrando un cliente en concreto del sistema");
-        deleteCliente("http://localhost:8080/ProyectoFinal20162017-web/webservice/ClienteService/Cliente/delete/3");
+        deleteCliente("http://localhost:8080/ProyectoFinal20162017-web/webservice/ClienteService/Cliente/delete/2");
     }
     
     // Obtenemos la lista de categorias

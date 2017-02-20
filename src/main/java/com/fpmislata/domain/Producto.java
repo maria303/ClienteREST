@@ -51,7 +51,6 @@ public class Producto implements Serializable{
     
     @ManyToOne
     @JoinColumn(name = "categoria")
-    @Expose
     private Categoria categoria;
 
     public Producto() {

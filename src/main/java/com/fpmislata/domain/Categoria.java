@@ -7,13 +7,17 @@ package com.fpmislata.domain;
 
 import com.google.gson.annotations.Expose;
 import java.io.Serializable;
+import java.util.Set;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -36,6 +40,9 @@ public class Categoria implements Serializable{
     @Column(nullable=false, length=50)
     @Expose
     private String nombre;
+    
+    @OneToMany(mappedBy = "categoria", cascade = {CascadeType.ALL}, fetch = FetchType.EAGER)
+    private Set<Producto> productos;
 
     public Categoria() {
     }
@@ -58,6 +65,14 @@ public class Categoria implements Serializable{
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public Set<Producto> getProductos() {
+        return productos;
+    }
+
+    public void setProductos(Set<Producto> productos) {
+        this.productos = productos;
     }
 
     @Override
