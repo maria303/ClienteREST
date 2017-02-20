@@ -46,7 +46,7 @@ public class ProductoClienteTest {
 
         //Mostrar producto concreto
         System.out.println("Producto concreto");
-        Producto producto = getProducto("http://localhost:8080/ProyectoFinal20162017-web/webservice/ProductoService/Productos/findById/4");
+        Producto producto = getProducto("http://localhost:8080/ProyectoFinal20162017-web/webservice/ProductoService/Productos/findById/1");
         System.out.println(producto.toString());
 
         System.out.println("----------------------");
@@ -85,7 +85,7 @@ public class ProductoClienteTest {
 
         //Borrar producto
         System.out.println("Borrando un producto en concreto del sistema");
-        deleteProducto("http://localhost:8080/ProyectoFinal20162017-web/webservice/ProductoService/Producto/delete/4");
+        deleteProducto("http://localhost:8080/ProyectoFinal20162017-web/webservice/ProductoService/Producto/delete/1");
     }
 
     // Obtenemos la lista de productos
