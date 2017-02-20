@@ -45,38 +45,38 @@ public class ClienteTest {
         Categoria p = getCategoria("http://localhost:8080/ProyectoFinal20162017-web/webservice/CategoriaService/Categorias/findById/1");
         System.out.println("La categoria recuperada es: " + p.toString());
         System.out.println("----------------------------\n");
-//
-//        // **********************************************
-//        // *** AÑADIMOS UNA CATEGORIA AL SISTEMA
-//        // **********************************************        
-//        Categoria nuevaCategoria = new Categoria();
-//        nuevaCategoria.setNombre("Nuevisima categoría");
-//
-//        System.out.println("Insertando una nueva categoria en el sistema");
-//        Categoria p2 = addCategoria("http://localhost:8080/ProyectoFinal20162017-web/webservice/CategoriaService/Categorias/add", nuevaCategoria);
-//        System.out.println("La categoria insertada es: " + p2.toString());
-//        System.out.println("----------------------------\n");
-//        
-//        // **********************************************
-//        // *** ACTUALIZAMOS UNA CATEGORIA EN EL SISTEMA
-//        // **********************************************        
-//        Categoria categoriaExistente = new Categoria();
-//        categoriaExistente.setNombre("categoria existente2");
-//        categoriaExistente.setId(8);
-//        
-//        System.out.println("Modificando una categoria en el sistema");
-//        Categoria p3 = updateCategoria("http://localhost:8080/ProyectoFinal20162017-web/webservice/CategoriaService/Categorias/update/6", categoriaExistente);
-//        System.out.println("La categoria modificada es ahora: " + p3.toString());
-//        System.out.println("----------------------------\n");        
-//
-//        
-//        // **********************************************
-//        // *** BORRAMOS UNA CATEGORIA AL SISTEMA
-//        // **********************************************         
-//        System.out.println("Recuperando una categoria en concrero del sistema");
-//        deleteCategoria("http://localhost:8080/ProyectoFinal20162017-web/webservice/CategoriaService/Categorias/delete/4");
-//        System.out.println("La categoria recuperada es: " + p.toString());
-//        System.out.println("----------------------------\n");   
+
+        // **********************************************
+        // *** AÑADIMOS UNA CATEGORIA AL SISTEMA
+        // **********************************************        
+        Categoria nuevaCategoria = new Categoria();
+        nuevaCategoria.setNombre("Nuevisima categoría");
+
+        System.out.println("Insertando una nueva categoria en el sistema");
+        Categoria p2 = addCategoria("http://localhost:8080/ProyectoFinal20162017-web/webservice/CategoriaService/Categorias/add", nuevaCategoria);
+        System.out.println("La categoria insertada es: " + p2.toString());
+        System.out.println("----------------------------\n");
+        
+        // **********************************************
+        // *** ACTUALIZAMOS UNA CATEGORIA EN EL SISTEMA
+        // **********************************************        
+        Categoria categoriaExistente = new Categoria();
+        categoriaExistente.setNombre("categoria existente2");
+        categoriaExistente.setId(8);
+        
+        System.out.println("Modificando una categoria en el sistema");
+        Categoria p3 = updateCategoria("http://localhost:8080/ProyectoFinal20162017-web/webservice/CategoriaService/Categorias/update/6", categoriaExistente);
+        System.out.println("La categoria modificada es ahora: " + p3.toString());
+        System.out.println("----------------------------\n");        
+
+        
+        // **********************************************
+        // *** BORRAMOS UNA CATEGORIA AL SISTEMA
+        // **********************************************         
+        System.out.println("Recuperando una categoria en concrero del sistema");
+        deleteCategoria("http://localhost:8080/ProyectoFinal20162017-web/webservice/CategoriaService/Categorias/delete/4");
+        System.out.println("La categoria recuperada es: " + p.toString());
+        System.out.println("----------------------------\n");   
     }
     
     // Obtenemos la lista de categorias
